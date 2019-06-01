@@ -1,0 +1,18 @@
+﻿@model EURISTest.Models.ProductSelectViewModel
+
+<tr>
+    <td>
+        <div class="custom-control custom-checkbox">
+            @Html.EditorFor(model => model.IsSelected)
+        </div>
+    </td>
+    <td>
+        @Html.LabelFor(model => model.IsSelected, Model.Code)
+    </td>
+    <td>
+        @Html.HiddenFor(model => model.Description)
+        @Html.HiddenFor(model => model.ProductId)
+        @Html.HiddenFor(model => model.Code)
+        @Html.LabelFor(model => model.IsSelected, Model.Description)
+    </td>
+</tr>
